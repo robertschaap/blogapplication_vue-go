@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <main>
     Blog Vue & Go
-  </div>
+  </main>
 </template>
 
 <script>
