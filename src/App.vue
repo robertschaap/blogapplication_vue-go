@@ -1,8 +1,20 @@
 <template>
   <div id="app">
+    <AppHeader />
     <router-view/>
   </div>
 </template>
+
+<script>
+import AppHeader from '@/components/AppHeader';
+
+export default {
+  name: 'App',
+  components: {
+    AppHeader,
+  },
+};
+</script>
 
 <style lang="scss">
 @import './assets/normalize.css';
@@ -35,5 +47,15 @@ h1 {
 
 p {
   margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
 }
 </style>
