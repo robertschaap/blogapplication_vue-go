@@ -3,7 +3,7 @@ const routes = {
 
   POSTS_ALL: '/posts',
   POSTS_NEW: '/posts/new',
-  POSTS_ONE: '/posts/:id',
+  POSTS_SINGLE: '/posts/:id',
 
   USERS_LOGIN: '/users/login',
   USERS_LOGOUT: 'users/logout',
