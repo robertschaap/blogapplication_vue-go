@@ -16,7 +16,7 @@ import LinkButton from '@/components/LinkButton';
 import AppNavigation from '@/components/AppNavigation';
 
 export default {
-  name: 'ThePageHeader',
+  name: 'AppHeader',
   components: {
     LinkButton,
     AppNavigation,
