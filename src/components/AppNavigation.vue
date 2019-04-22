@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'TheNavigation',
+  name: 'AppNavigation',
   data: () => ({
     links: [
       { to: '/', label: 'Home' },
