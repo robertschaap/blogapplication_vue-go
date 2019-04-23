@@ -1,10 +1,13 @@
 <template>
   <FormGroup :label="label">
-    <select :class="$style.component">
+    <select
+      :class="$style.component"
+      :value="value"
+      @input="$emit('input', $event.target.value)">
       <option
         v-for="option in options"
         :key="option.value"
-        value="val">
+        :value="option.value">
         {{ option.label }}
       </option>
     </select>
@@ -19,6 +22,7 @@ export default {
   props: {
     label: String,
     options: Array,
+    value: String,
   },
   components: {
     FormGroup,
