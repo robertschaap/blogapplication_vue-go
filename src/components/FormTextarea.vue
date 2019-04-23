@@ -1,8 +1,8 @@
 <template>
   <FormGroup :label="label">
     <textarea
-      v-bind:value="value"
-      v-on:input="$emit('input', $event.target.value)"
+      :value="value"
+      @input="$emit('input', $event.target.value)"
     :class="$style.component"/>
   </FormGroup>
 </template>
@@ -14,6 +14,7 @@ export default {
   name: 'FormTextarea',
   props: {
     label: String,
+    value: String,
   },
   components: {
     FormGroup,
