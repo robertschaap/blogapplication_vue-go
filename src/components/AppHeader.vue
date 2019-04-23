@@ -3,6 +3,10 @@
     <div :class="$style.top">
       <h1 :class="$style.title">.Dotted Pixels</h1>
       <nav>
+        <LinkButton label="+" :to="newPostRoute" />
+        <LinkButton label="Log Out" :to="logoutRoute" />
+      </nav>
+      <nav>
         <LinkButton label="Sign In" :to="loginRoute" />
         <LinkButton label="Sign Up" :to="newUserRoute" />
       </nav>
@@ -20,6 +24,8 @@ export default {
   name: 'AppHeader',
   data: () => ({
     loginRoute: Routes.USERS_LOGIN,
+    logoutRoute: Routes.USERS_LOGOUT,
+    newPostRoute: Routes.POSTS_NEW,
     newUserRoute: Routes.USERS_NEW,
   }),
   components: {
