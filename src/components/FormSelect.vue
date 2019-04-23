@@ -1,7 +1,12 @@
 <template>
   <FormGroup :label="label">
     <select :class="$style.component">
-      <option value="val">option</option>
+      <option
+        v-for="option in options"
+        :key="option.value"
+        value="val">
+        {{ option.label }}
+      </option>
     </select>
   </FormGroup>
 </template>
@@ -13,6 +18,7 @@ export default {
   name: 'FormSelect',
   props: {
     label: String,
+    options: Array,
   },
   components: {
     FormGroup,
