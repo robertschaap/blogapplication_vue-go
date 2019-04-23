@@ -3,8 +3,8 @@
     <div :class="$style.top">
       <h1 :class="$style.title">.Dotted Pixels</h1>
       <nav>
-        <LinkButton label="Sign In" to="/" />
-        <LinkButton label="Sign Up" to="/" />
+        <LinkButton label="Sign In" :to="loginRoute" />
+        <LinkButton label="Sign Up" :to="newUserRoute" />
       </nav>
     </div>
     <AppNavigation />
@@ -12,11 +12,16 @@
 </template>
 
 <script>
+import Routes from '../routes';
 import LinkButton from '@/components/LinkButton';
 import AppNavigation from '@/components/AppNavigation';
 
 export default {
   name: 'AppHeader',
+  data: () => ({
+    loginRoute: Routes.USERS_LOGIN,
+    newUserRoute: Routes.USERS_NEW,
+  }),
   components: {
     LinkButton,
     AppNavigation,
