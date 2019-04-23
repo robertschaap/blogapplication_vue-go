@@ -1,9 +1,9 @@
 <template>
   <FormGroup :label="label">
     <input
-      v-bind:value="value"
-      v-on:input="$emit('input', $event.target.value)"
-      :class="$style.component"/>
+      :value="value"
+      @:input="$emit('input', $event.target.value)"
+      :class="$style.component" />
   </FormGroup>
 </template>
 
