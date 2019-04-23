@@ -1,6 +1,9 @@
 <template>
   <FormGroup :label="label">
-    <textarea :class="$style.component"/>
+    <textarea
+      v-bind:value="value"
+      v-on:input="$emit('input', $event.target.value)"
+    :class="$style.component"/>
   </FormGroup>
 </template>
 
