@@ -1,6 +1,9 @@
 <template>
   <FormGroup :label="label">
-    <input :class="$style.component"/>
+    <input
+      v-bind:value="value"
+      v-on:input="$emit('input', $event.target.value)"
+      :class="$style.component"/>
   </FormGroup>
 </template>
 
@@ -11,6 +14,7 @@ export default {
   name: 'FormInput',
   props: {
     label: String,
+    value: String,
   },
   components: {
     FormGroup,
