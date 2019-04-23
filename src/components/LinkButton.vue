@@ -1,5 +1,5 @@
 <template>
-  <router-link :class="$style.component" to="to">{{ label }}</router-link>
+  <router-link :class="$style.component" :to="to">{{ label }}</router-link>
 </template>
 
 <script>
