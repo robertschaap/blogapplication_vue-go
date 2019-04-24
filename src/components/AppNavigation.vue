@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav :class="$style.component">
     <router-link
       v-for="link in links"
       :class="$style.link"
@@ -27,10 +27,14 @@ export default {
 </script>
 
 <style lang="scss" module>
+.component {
+  padding: 0 0.5rem;
+}
+
 .link {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  padding-right: 0.6rem;
+  margin-right: 0.6rem;
   text-decoration: none;
   color: #666;
 
