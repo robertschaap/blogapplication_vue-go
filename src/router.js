@@ -4,6 +4,7 @@ import Routes from './routes';
 
 import AllPostsPage from './pages/AllPostsPage.vue';
 import HomePage from './pages/HomePage.vue';
+import LoginPage from './pages/LoginPage.vue';
 import NewPostPage from './pages/NewPostPage.vue';
 import NewUserPage from './pages/NewUserPage.vue';
 import SinglePostPage from './pages/SinglePostPage.vue';
@@ -20,6 +21,7 @@ export default new Router({
     { path: Routes.POSTS_NEW, component: NewPostPage },
     { path: Routes.POSTS_SINGLE, component: SinglePostPage },
 
+    { path: Routes.USERS_LOGIN, component: LoginPage },
     { path: Routes.USERS_NEW, component: NewUserPage },
   ],
 });
