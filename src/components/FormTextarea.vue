@@ -3,7 +3,7 @@
     <textarea
       :value="value"
       @input="$emit('input', $event.target.value)"
-    :class="$style.component"/>
+      :class="$style.component"/>
   </FormGroup>
 </template>
 
