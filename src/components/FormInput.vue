@@ -19,6 +19,7 @@ export default {
     type: {
       type: String,
       default: 'text',
+      validator: prop => ['text', 'password'].some(v => v === prop),
     },
   },
   components: {
