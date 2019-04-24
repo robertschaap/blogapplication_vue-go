@@ -1,6 +1,7 @@
 <template>
   <FormGroup :label="label">
     <input
+      :type="type"
       :value="value"
       @:input="$emit('input', $event.target.value)"
       :class="$style.component" />
@@ -15,6 +16,10 @@ export default {
   props: {
     label: String,
     value: String,
+    type: {
+      type: String,
+      default: 'text',
+    },
   },
   components: {
     FormGroup,
