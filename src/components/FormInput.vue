@@ -3,7 +3,7 @@
     <input
       :type="type"
       :value="value"
-      @:input="$emit('input', $event.target.value)"
+      @input="$emit('input', $event.target.value)"
       :class="$style.component" />
   </FormGroup>
 </template>
