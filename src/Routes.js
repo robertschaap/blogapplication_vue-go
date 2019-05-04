@@ -1,4 +1,4 @@
-const routes = {
+const Routes = {
   HOME: '/',
 
   POSTS_ALL: '/posts',
@@ -10,4 +10,4 @@ const routes = {
   USERS_NEW: '/users/new',
 };
 
-export default routes;
+export default Routes;
