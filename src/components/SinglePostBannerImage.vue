@@ -1,10 +1,17 @@
 <template>
-  <section :class="$style.component" />
+  <section
+    :class="$style.component"
+    :style="{ backgroundImage: `url(/banners/${randomImageId()}.jpg`}" />
 </template>
 
 <script>
 export default {
   name: 'SinglePostBannerImage',
+  methods: {
+    randomImageId () {
+      return Math.floor(Math.random()* 6) + 1;
+    },
+  },
 };
 </script>
 
