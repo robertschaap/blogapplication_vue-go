@@ -1,6 +1,8 @@
 <template>
   <div :class="$style.component">
-    <div :class="$style.avatar" />
+    <div :class="$style.avatar">
+      <img :class="$style.avatarImage" src="/avatars/1.jpg" />
+    </div>
     <div :class="$style.body">
       <p :class="$style.author">{{ firstName }} {{ lastName }}</p>
       <p>{{ body}}</p>
@@ -31,6 +33,12 @@ export default {
   border-radius: 50%;
   background-color: #eee;
   margin-right: 1rem;
+  overflow: hidden;
+
+  &Image {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .body {
