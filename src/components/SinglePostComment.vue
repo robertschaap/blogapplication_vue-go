@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.component">
-    <div :class="$style.image" />
+    <div :class="$style.avatar" />
     <div :class="$style.body">
       <p :class="$style.author">{{ firstName }} {{ lastName }}</p>
       <p>{{ body}}</p>
@@ -24,7 +24,7 @@ export default {
   display: flex;
 }
 
-.image {
+.avatar {
   flex: none;
   width: 40px;
   height: 40px;
