@@ -10,7 +10,8 @@
         :class="{
           [$style.imageLarge]: isLarge,
           [$style.imageMedium]: isMedium,
-      }" />
+        }"
+        :style="{ backgroundImage: `url(/banners/${randomImageId()}.jpg`}" />
       <div :class="$style.text">
         <h2>{{ title }}</h2>
         <p>{{ author }}</p>
@@ -27,6 +28,11 @@ export default {
     isLarge: Boolean,
     isMedium: Boolean,
     title: String,
+  },
+  methods: {
+    randomImageId () {
+      return Math.floor(Math.random()* 6) + 1;
+    },
   },
 };
 </script>
