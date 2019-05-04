@@ -9,7 +9,7 @@ export default {
   name: 'SinglePostBannerImage',
   methods: {
     randomImageId () {
-      return Math.floor(Math.random()* 6) + 1;
+      return Math.floor(Math.random() * 6) + 1;
     },
   },
 };
