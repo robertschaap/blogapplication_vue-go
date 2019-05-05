@@ -1,7 +1,9 @@
 <template>
   <header :class="$style.component">
     <div :class="$style.top">
-      <h1 :class="$style.title">.Dotted Pixels</h1>
+      <router-link :class="$style.title" :to="homeRoute">
+        <h1>.Dotted Pixels</h1>
+      </router-link>
       <nav>
         <LinkButton label="+" :to="newPostRoute" />
         <LinkButton label="Log Out" :to="logoutRoute" />
@@ -23,6 +25,7 @@ import AppNavigation from '@/components/AppNavigation';
 export default {
   name: 'AppHeader',
   data: () => ({
+    homeRoute: Routes.HOME,
     loginRoute: Routes.USERS_LOGIN,
     logoutRoute: Routes.USERS_LOGOUT,
     newPostRoute: Routes.POSTS_NEW,
@@ -46,6 +49,10 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
+}
+
+.title {
+  text-decoration: none;
 }
 
 @media (max-width: 600px) {
