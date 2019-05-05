@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Routes from '../routes';
+import Routes from '../Routes';
 import LinkButton from '@/components/LinkButton';
 import AppNavigation from '@/components/AppNavigation';
 
