@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Routes from './routes';
+import Routes from './Routes';
 
 import AllPostsPage from './pages/AllPostsPage.vue';
 import HomePage from './pages/HomePage.vue';
