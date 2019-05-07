@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <AppHeader />
+    <AppHeader :isLoggedIn="isLoggedIn"/>
     <router-view/>
     <AppFooter />
   </div>
@@ -16,6 +16,9 @@ export default {
     AppFooter,
     AppHeader,
   },
+  data: () => ({
+    isLoggedIn: true,
+  }),
 };
 </script>
 
