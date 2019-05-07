@@ -11,18 +11,26 @@
 </template>
 
 <script>
+import Categories from '../Categories';
+
 export default {
   name: 'AppNavigation',
-  data: () => ({
-    links: [
-      { to: '/', label: 'Home' },
-      { to: '/posts', label: 'All Posts' },
-      { to: '/posts/technology', label: 'Technology' },
-      { to: '/posts/design', label: 'Design' },
-      { to: '/posts/entrepreneur', label: 'Entrepreneur' },
-      { to: '/posts/anything', label: 'Anything' },
-    ],
-  }),
+  data: function () {
+    return {
+      links: [
+        { to: '/', label: 'Home' },
+        ...this.blaat(),
+      ],
+    };
+  },
+  methods: {
+    blaat: function () {
+      return Object.keys(Categories).map(key => ({
+        to: `/posts/${key}`,
+        label: Categories[key],
+      }));
+    },
+  },
 };
 </script>
 
