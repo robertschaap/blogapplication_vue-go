@@ -4,11 +4,11 @@
       <router-link :class="$style.title" :to="homeRoute">
         <h1>.Dotted Pixels</h1>
       </router-link>
-      <nav>
+      <nav v-if="isLoggedIn">
         <LinkButton label="+" :to="newPostRoute" />
         <LinkButton label="Log Out" :to="logoutRoute" />
       </nav>
-      <nav>
+      <nav v-else="">
         <LinkButton label="Sign In" :to="loginRoute" />
         <LinkButton label="Sign Up" :to="newUserRoute" />
       </nav>
@@ -34,6 +34,9 @@ export default {
   components: {
     LinkButton,
     AppNavigation,
+  },
+  props: {
+    isLoggedIn: Boolean,
   },
 };
 </script>
