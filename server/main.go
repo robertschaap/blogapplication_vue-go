@@ -23,7 +23,7 @@ func startServer() {
 	r.HandleFunc("/api/users/new", helloWorldHandler).Methods("GET")
 	r.HandleFunc("/api/users/login", helloWorldHandler).Methods("GET")
 
-	port := ":3000"
+	port := ":3001"
 
 	fmt.Println("Running on http://localhost" + port)
 	log.Fatal(http.ListenAndServe(port, r))
