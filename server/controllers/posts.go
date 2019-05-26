@@ -3,8 +3,9 @@ package controllers
 import (
 	"github.com/gorilla/mux"
 	"fmt"
-	"encoding/json"
 	"net/http"
+
+	"../api"
 )
 
 // GetPostsHandler doesnt do much yet
@@ -15,19 +16,22 @@ func GetPostsHandler(w http.ResponseWriter, r *http.Request) {
 		Author  string	`json:"author"`
 	}
 
-	var post []Post
+	var posts []Post
 
-	post = append(post, Post{ 0, "title", "author" })
-	post = append(post, Post{ 1, "title", "author" })
-	post = append(post, Post{ 2, "title", "author" })
-	post = append(post, Post{ 3, "title", "author" })
-	post = append(post, Post{ 4, "title", "author" })
-	post = append(post, Post{ 5, "title", "author" })
+	posts = append(posts, Post{ 0, "title", "author" })
+	posts = append(posts, Post{ 1, "title", "author" })
+	posts = append(posts, Post{ 2, "title", "author" })
+	posts = append(posts, Post{ 3, "title", "author" })
+	posts = append(posts, Post{ 4, "title", "author" })
+	posts = append(posts, Post{ 5, "title", "author" })
 
-	fmt.Println(post)
+	res := api.Response{
+		Status: "success",
+		Data: posts,
+		Message: "",
+	}
 
-	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(post)
+	res.JSON(w)
 }
 
 // GetPostsByCategoryHandler doesnt do much yet
@@ -41,15 +45,20 @@ func GetPostsByCategoryHandler(w http.ResponseWriter, r *http.Request) {
 		Author  string	`json:"author"`
 	}
 
-	var post []Post
+	var posts []Post
 
-	post = append(post, Post{ 0, "title", "author" })
-	post = append(post, Post{ 1, "title", "author" })
-	post = append(post, Post{ 2, "title", "author" })
-	post = append(post, Post{ 3, "title", "author" })
-	post = append(post, Post{ 4, "title", "author" })
-	post = append(post, Post{ 5, "title", "author" })
+	posts = append(posts, Post{ 0, "title", "author" })
+	posts = append(posts, Post{ 1, "title", "author" })
+	posts = append(posts, Post{ 2, "title", "author" })
+	posts = append(posts, Post{ 3, "title", "author" })
+	posts = append(posts, Post{ 4, "title", "author" })
+	posts = append(posts, Post{ 5, "title", "author" })
 
-	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(post)
+	res := api.Response{
+		Status: "success",
+		Data: posts,
+		Message: "",
+	}
+
+	res.JSON(w)
 }
