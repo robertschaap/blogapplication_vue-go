@@ -2,9 +2,11 @@ package main
 
 import (
 	"github.com/gorilla/mux"
+
+	"./server"
 )
 
 func main() {
-	s := server{ r: mux.NewRouter(), port: ":3001" }
-	s.start()
+	s := server.Server{ R: mux.NewRouter(), Port: ":3001" }
+	s.Start()
 }
