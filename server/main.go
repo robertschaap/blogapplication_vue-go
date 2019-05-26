@@ -6,6 +6,8 @@ import (
 	"github.com/gorilla/mux"
 	"log"
 	"net/http"
+
+	"./controllers"
 )
 
 func helloWorldHandler(w http.ResponseWriter, r *http.Request) {
@@ -17,6 +19,7 @@ func startServer() {
 	r := mux.NewRouter()
 	r.HandleFunc("/", helloWorldHandler).Methods("GET")
 	r.HandleFunc("/api/comments/new", helloWorldHandler).Methods("GET")
+	r.HandleFunc("/api/posts", controllers.GetPostsHandler).Methods("GET")
 	r.HandleFunc("/api/posts/{category}", helloWorldHandler).Methods("GET")
 	r.HandleFunc("/api/posts/{id}", helloWorldHandler).Methods("GET")
 	r.HandleFunc("/api/posts/new", helloWorldHandler).Methods("GET")
