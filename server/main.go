@@ -20,7 +20,7 @@ func startServer() {
 	r.HandleFunc("/", helloWorldHandler).Methods("GET")
 	r.HandleFunc("/api/comments/new", helloWorldHandler).Methods("GET")
 	r.HandleFunc("/api/posts", controllers.GetPostsHandler).Methods("GET")
-	r.HandleFunc("/api/posts/{category}", helloWorldHandler).Methods("GET")
+	r.HandleFunc("/api/posts/{category}", controllers.GetPostsByCategoryHandler).Methods("GET")
 	r.HandleFunc("/api/posts/{id}", helloWorldHandler).Methods("GET")
 	r.HandleFunc("/api/posts/new", helloWorldHandler).Methods("GET")
 	r.HandleFunc("/api/users/new", helloWorldHandler).Methods("GET")
