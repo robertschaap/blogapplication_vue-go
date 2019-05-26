@@ -42,7 +42,9 @@ export default {
       const res = await fetch('/api/posts');
       const json = await res.json();
 
-      this.posts = json;
+      if (json.status === 'success') {
+        this.posts = json.data;
+      }
     },
   },
 };
