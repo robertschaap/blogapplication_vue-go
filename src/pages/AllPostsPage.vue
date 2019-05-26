@@ -24,12 +24,18 @@ export default {
     PostListTile,
   },
   data: () => ({
-    posts: [
-      { id: 0, title: 'Title', author: 'Author' },
-      { id: 1, title: 'Title', author: 'Author' },
-      { id: 2, title: 'Title', author: 'Author' },
-      { id: 3, title: 'Title', author: 'Author' },
-    ],
+    posts: [],
   }),
+  created () {
+    this.fetchPosts();
+  },
+  methods: {
+    async fetchPosts () {
+      const res = await fetch('/api/posts/all');
+      const json = await res.json();
+
+      this.posts = json;
+    },
+  },
 };
 </script>
