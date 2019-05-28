@@ -5,6 +5,7 @@
       <PostListTile
         v-for="post in posts"
         :key="post.id"
+        :id="post.id"
         :author="post.author"
         :title="post.title" />
     </PostList>
