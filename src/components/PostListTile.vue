@@ -4,7 +4,7 @@
       [$style.component]: true,
       [$style.noSpan]: isLarge || isMedium,
     }">
-    <router-link to="/">
+    <router-link :to="`/posts/${id}`">
       <div
         v-if="isLarge || isMedium"
         :class="{
@@ -25,6 +25,7 @@ export default {
   name: 'PostListTile',
   props: {
     author: String,
+    id: Number,
     isLarge: Boolean,
     isMedium: Boolean,
     title: String,
