@@ -4,6 +4,7 @@
       <PostListTile
         v-for="post in homePosts"
         :key="post.id"
+        :id="post.id"
         :author="post.author"
         :isLarge="post.isLarge"
         :isMedium="post.isMedium"
