@@ -16,6 +16,8 @@ import PostCategoryHeader from '@/components/PostCategoryHeader';
 import PostList from '@/components/PostList';
 import PostListTile from '@/components/PostListTile';
 
+import ApiStatusType from '@/ApiStatusType';
+
 export default {
   name: 'AllPostsPage',
   components: {
@@ -34,7 +36,7 @@ export default {
       const res = await fetch('/api/posts/all');
       const json = await res.json();
 
-      if (json.status === 'success') {
+      if (json.status === ApiStatusType.SUCCESS) {
         this.posts = json.data;
       }
     },
