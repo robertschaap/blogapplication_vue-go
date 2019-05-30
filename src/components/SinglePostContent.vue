@@ -2,22 +2,32 @@
   <section :class="$style.component">
     <div :class="$style.header">
       <div :class="$style.headerDescription">
-        <h2>That feeling when you're coding in a new framework</h2>
-        <p>Robert schaap</p>
-        <p>Robert is aa true hero. He taught himself to code with the help of courses, books and a bit of magic.</p>
+        <h2>{{ body.title }}</h2>
+        <p>{{ author.firstName }} {{ author.lastName }}</p>
+        <p>{{ author.bio }}</p>
       </div>
       <div :class="$style.headerAvatar">
         <img :class="$style.headerAvatarImage" src="/avatars/1.jpg" />
       </div>
     </div>
 
-    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+    <p>{{ body.body }}</p>
   </section>
 </template>
 
 <script>
 export default {
   name: 'SinglePostContent',
+  props: {
+    author: {
+      type: Object,
+      required: true,
+    },
+    body: {
+      type: Object,
+      required: true,
+    },
+  },
 };
 </script>
 
@@ -49,5 +59,4 @@ export default {
     }
   }
 }
-
 </style>
