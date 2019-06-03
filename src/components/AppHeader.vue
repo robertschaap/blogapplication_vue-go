@@ -64,6 +64,7 @@ export default {
   }
 
   .title {
+    display: block;
     margin-bottom: 1rem;
   }
 }
