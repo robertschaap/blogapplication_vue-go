@@ -1,5 +1,7 @@
 <template>
-  <form :class="$style.component">
+  <form
+    :class="$style.component"
+    @submit.prevent="handleSubmit(form)">
     <FormInput
       v-model="form.userName"
       label="Username" />
@@ -24,6 +26,9 @@ import FormSubmitButton from '@/components/FormSubmitButton';
 
 export default {
   name: 'LoginForm',
+  props: {
+    handleSubmit: Function,
+  },
   data: () => ({
     form: {
       userName: '',
