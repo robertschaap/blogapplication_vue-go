@@ -17,8 +17,8 @@ export default new Router({
   routes: [
     { path: Routes.HOME, component: HomePage },
 
-    { path: Routes.POSTS_ALL, component: AllPostsPage },
     { path: Routes.POSTS_NEW, component: NewPostPage },
+    { path: Routes.POSTS_ALL, component: AllPostsPage },
     { path: Routes.POSTS_SINGLE, component: SinglePostPage },
 
     { path: Routes.USERS_LOGIN, component: LoginPage },
