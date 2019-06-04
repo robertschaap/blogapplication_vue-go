@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"encoding/json"
 	"net/http"
 
 	"../api"
@@ -35,6 +34,11 @@ func GetUserLoginHandler(w http.ResponseWriter, r *http.Request) {
 
 // CreateUserHandler does stuff
 func CreateUserHandler(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode("Hello World")
+	res := api.Response{
+		Status: "success",
+		Data: nil,
+		Message: "",
+	}
+
+	res.JSON(w)
 }
