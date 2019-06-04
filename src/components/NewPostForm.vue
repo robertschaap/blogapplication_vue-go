@@ -1,5 +1,7 @@
 <template>
-  <form :class="$style.component">
+  <form
+    :class="$style.component"
+    @submit.prevent="handleSubmit(form)">
     <FormInput
       v-model="form.title"
       label="Title" />
