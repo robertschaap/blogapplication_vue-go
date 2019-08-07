@@ -2,23 +2,18 @@
 A blog application where users can signup, post and read as well as comment on posts.
 
 ##### Technologies
-HTML5 | CSS3 | JavaScript | Vue | Go | Upper.io | Mongo DB
+HTML5 | CSS3 | JavaScript | Vue | Vue Router
 
 ### Scope
 ##### What it was designed to do
 + Use REST routing with query parameters.
-+ Implement an MVC type architecture in Go.
++ Be a first proper foray into VueJS
 
 ##### What it wasn't designed to do
 - Updating/editing. This can be built in but the focus of the project was more on the routing and the actual posting/reading.
 
 ### Installation Notes
-Please feel free to download or clone the repository. Please make sure you have Go installed. I haven't used Glide or Dep for package management so you may just need to go get Upper.io. Also make sure that you have MongoDB installed.
+Please feel free to download or clone the repository. This is just the front-end, back-end repositories are named `blog_be_*`. By default the front-end will run on port `3000` and will proxy calls to the API to port `4000`.
 
 Front-end
 - From project root run `npm run serve`
-
-Back-end
-- From project root
-- CD into `server` folder
-- run `go run main.go`
